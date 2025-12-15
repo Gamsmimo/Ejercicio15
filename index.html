@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 15 - Flash Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flash Cards</h1>
+        </header>
+        
+        <main>
+            <!-- Barra de progreso -->
+            <div class="progress-container">
+                <div class="progress-text">
+                    <span id="progress-percent">25%</span>
+                    <span id="current-card">5</span> of <span id="total-cards">20</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta flash -->
+            <div class="flashcard-container">
+                <div id="flashcard" class="flashcard">
+                    <div class="flashcard-front">
+                        <div class="question-content">
+                            <h2 id="question">What is the difference between var, let, and const?</h2>
+                        </div>
+                        <div class="card-footer">
+                            <p class="hint">Click en la tarjeta para ver la respuesta</p>
+                        </div>
+                    </div>
+                    <div class="flashcard-back">
+                        <div class="answer-content">
+                            <h2>Respuesta:</h2>
+                            <p id="answer">In JavaScript, var is function-scoped and can be re-declared; let and const are block-scoped, with let allowing re-assignment and const preventing it. However, const objects can have their contents modified.</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="hint">Click en la tarjeta para ver la pregunta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controles de navegación -->
+            <div class="navigation">
+                <button id="prev-btn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i> Anterior
+                </button>
+                <button id="flip-btn" class="nav-btn flip-btn">
+                    Mostrar Respuesta
+                </button>
+                <button id="next-btn" class="nav-btn">
+                    Siguiente <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Indicador de estado de respuesta -->
+            <div class="answer-state">
+                <span id="answer-state-text">Respuesta oculta</span>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Proyecto 15 - Tarjetas Flash | JavaScript Vanilla</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
